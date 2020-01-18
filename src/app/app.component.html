@@ -1,0 +1,34 @@
+<div style="padding: 15px;">
+	<div class="row">
+		<div class="col-12 col-md-3">
+			<app-filters (selectedFilters)="onFilterUpdate($event)"></app-filters>
+		</div>
+		<div class="col-12 col-md-9">
+
+			<div class="row">
+				<div class="col">
+					<header>Selected Filters</header>
+				</div>
+				<div>
+
+					<div class="row">
+						<div class="col p-0">
+							<div class="col-12 col-md-6">
+								<div class="col-9 pr-0 float-left">
+									<label for="searchFilter">Serach By Name</label>
+									<input type="text" class="form-control mb-2 mr-sm-2" id="searchFilter" placeholder="Search by Name" #seachFilter>
+                </div>
+                <div class="col-3 pl-0 float-left" style="margin-top: 32px; margin-left: -2px">
+									<button class="btn btn-primary" type="submit" (click)="filterByName(seachFilter.value)">Search</button>
+                </div>
+								</div>
+								<div class="col-12 col-md-6"></div>
+							</div>
+							<div>
+
+								<ng-container *ngFor="let item of data">
+									<app-detail [detail]="item"></app-detail>
+								</ng-container>
+							</div>
+						</div>
+					</div>

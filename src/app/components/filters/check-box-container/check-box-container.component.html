@@ -1,0 +1,7 @@
+ <div class="container">
+  <header class="header"><strong>{{data.header}}</strong></header>
+  <div class="form-check" *ngFor="let catgory of data.categories">
+      <input type="checkbox" class="form-check-input" id="catgory" (ngModelChange)="onChange(data.header, catgory, $event)" [ngModel]="modelVal">
+      <label class="form-check-label" for="exampleCheck1">{{catgory}}</label>
+  </div>
+</div>

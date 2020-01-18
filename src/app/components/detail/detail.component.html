@@ -1,0 +1,37 @@
+<div class="col-6 col-md-3 float-left">
+<div class="card">
+  <img class="card-img-top" [src]="detail.image" [alt]="detail.name">
+  <div class="card-body">
+    <h5 class="card-title">{{detail.name}}</h5>
+    Id: <span class="card-text">{{detail.id}}</span>
+    Created: <span class="card-text">{{detail.created}}</span>
+  </div>
+  <ul class="list-group list-group-flush">
+
+    <li class="list-group-item row m-0 p-0">
+      <div class="col-5 float-left">STATUS</div>
+      <div class="col-7 float-left text-right text-warning"> {{detail.status}} </div>
+    </li>
+
+    <li class="list-group-item row m-0 p-0">
+      <div class="col-5 float-left">SPECIES</div>
+      <div class="col-7 float-left text-right text-warning"> {{detail.species}} </div>
+    </li>
+
+    <li class="list-group-item row m-0 p-0">
+      <div class="col-5 float-left">GENDER</div>
+      <div class="col-7 float-left text-right text-warning"> {{detail.gender}} </div>
+    </li>
+
+    <li class="list-group-item row m-0 p-0">
+      <div class="col-5 float-left">ORIGIN</div>
+      <div class="col-7 float-left text-right text-warning"> {{detail.origin.name}} </div>
+    </li>
+
+    <li class="list-group-item row m-0 p-0">
+      <div class="col-5 float-left">Last Location</div>
+      <div class="col-7 float-left text-right text-warning"> {{detail.location.name}} </div>
+    </li>
+  </ul>
+</div>
+</div>

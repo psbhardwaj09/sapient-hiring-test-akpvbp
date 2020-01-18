@@ -1,0 +1,5 @@
+
+<h3>Filters</h3>
+<ng-container *ngFor="let filter of filter">
+  <app-check-box-container [filterData]="filter" (onCheckValChanged)="onCheckValChanged($event)"></app-check-box-container>
+</ng-container>
